@@ -1,0 +1,23 @@
+.toppage
+  .header
+    .subtitle
+      %h1= link_to "Take Notes", "/", class: 'apptitle'
+    - if user_signed_in?
+      .user_nav.sign
+        = link_to "ログアウト", destroy_user_session_path, class:"post",method: :delete
+        = link_to  "新規作成", "/", class: "post"
+    - else
+      .sign
+        = link_to "ログイン", new_user_session_path, class: 'post'
+        = link_to "新規登録", new_user_registration_path, class: 'post'
+  .main-contents
+    .left-contents
+      .list
+        .list-title プログラミングに関して
+        .list-date 日付
+      .list
+        .list-title 自作アプリ
+        .list-date 日付
+    .right-contents
+      .text-date 日付
+      .text-content 内容

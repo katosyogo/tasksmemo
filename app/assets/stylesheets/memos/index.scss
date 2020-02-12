@@ -1,0 +1,64 @@
+.toppage {
+  .header{
+    height: 100px;
+    width: 100%;
+    padding: 0 150px;
+    background-color: #ffdead;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .apptitle {
+      color:#000000;
+    }
+    .post {
+      font-size: 18px;
+      color: #000000;
+      border: 2px solid #b0c4de;
+      border-radius: 10px;
+      padding: 5px;
+      background: #ffd700;
+      margin: 5px;
+    }
+  }
+  .main-contents {
+    width: 100%;
+    height: 100vh;  /*縦にいっぱい*/
+    background: #fffafa;
+    display: flex;
+    .left-contents {
+      width: calc(100% - 80%);
+      height: 100vh;
+      border-right: 2px solid #dcdcdc;
+      padding: 20px;
+      overflow: scroll;
+      .list {
+        height: 80px;
+        border-bottom: 2px solid #dcdcdc;
+        padding: 5px;
+        display: flex;    /*セットで縦並び*/
+        flex-direction: column;
+        .list-title {
+          max-width: 100%;
+          overflow: hidden;
+          text-overflow: ellipsis;   /* オーバー分を...にする */
+          white-space: nowrap;  /* 1行にする */
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .right-contents {
+      width: calc(100% - 20%);
+      height: 100vh;
+      padding: 30px;
+      overflow: scroll;
+      .text-date {
+        height: 20px;
+        text-align: center;
+      }
+      .text-content {
+        margin-top: 20px;
+      }
+    }
+  }
+}
