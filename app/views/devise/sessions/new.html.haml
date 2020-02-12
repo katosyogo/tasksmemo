@@ -1,0 +1,40 @@
+.SigninPage
+  .signheader
+    %b.sign ログイン
+  .form-group
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .form-group
+        -# %label ニックネーム
+        -# = f.text_field :nickname, class:"form-control", placeholder: "ニックネームを入力してください", autofocus: true, autocomplete: "nickname"
+        %label Eメール
+        = f.email_field :email, class:"form-control", placeholder: "Eメールを入力してください", autofocus: true, autocomplete: "email"
+        %label パスワード
+        -# - if @minimum_password_length
+        -#   %em
+        -#     (#{@minimum_password_length} 文字以上で入力してください)
+        = f.password_field :password, class:"form-control", placeholder: "6文字以上", autocomplete: "new-password"
+        -# %label 再度入力してくだい
+        -# = f.password_field :password_confirmation, class:"form-control", placeholder: "パスワードを入力して下さい", autocomplete: "new-password"
+      .actions
+        = f.submit "Login", class: "submitbtn"
+    -# = render "devise/shared/links"
+
+
+
+-# %h2 Log in
+-# = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+-#   .field
+-#     = f.label :email
+-#     %br/
+-#     = f.email_field :email, autofocus: true, autocomplete: "email"
+-#   .field
+-#     = f.label :password
+-#     %br/
+-#     = f.password_field :password, autocomplete: "current-password"
+-#   - if devise_mapping.rememberable?
+-#     .field
+-#       = f.check_box :remember_me
+-#       = f.label :remember_me
+-#   .actions
+-#     = f.submit "Log in"
+-# = render "devise/shared/links"
