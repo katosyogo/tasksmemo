@@ -11,13 +11,34 @@
         = link_to "ログイン", new_user_session_path, class: 'post'
         = link_to "新規登録", new_user_registration_path, class: 'post'
   .main-contents
-    .left-contents
-      .list
-        .list-title プログラミングに関して
-        .list-date 日付
-      .list
-        .list-title 自作アプリ
-        .list-date 日付
-    .right-contents
-      .text-date 日付
-      .text-content 内容
+    %ul.left-contents
+      - current_user.memos.each do |memo|
+        %li.list
+          .list-title
+            = memo.title
+          .list-date 
+            = memo.created_at
+    %ul.right-contents
+      - current_user.memos.each do |memo|
+        %li.text
+          .text-date
+            = memo.created_at
+          .text-content
+            = memo.content
+        
+
+-# %ul.tabs
+-#       %li.current 取引中
+-#       %li 過去の取引
+-#     .bottom__list
+-#       %ul.content
+-#         %li
+-#           .test1
+-#             = image_tag "logo_gray.svg", class: "logo"
+-#           .test
+-#             取引中の商品がありません
+-#         %li.hide
+-#           .test1
+-#             = image_tag "logo_gray.svg", class: "logo"
+-#           .test
+-#             過去に取引した商品がありません

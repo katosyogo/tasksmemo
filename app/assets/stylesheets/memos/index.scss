@@ -32,12 +32,12 @@
       border-right: 2px solid #dcdcdc;
       padding: 20px;
       overflow: scroll;
-      .list {
+      li {
         height: 80px;
         border-bottom: 2px solid #dcdcdc;
         padding: 5px;
-        display: flex;    /*セットで縦並び*/
-        flex-direction: column;
+        // display: flex;    /*セットで縦並び*/
+        // flex-direction: column;
         .list-title {
           max-width: 100%;
           overflow: hidden;
