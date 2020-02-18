@@ -68,32 +68,20 @@
         margin-top: 20px;
         white-space: pre-wrap;
       }
-        .edit-delete-btn {
-          // height: 30px;
-          width: 100px;
-          display: flex;
-          justify-content: space-between;
-          margin-bottom: 10px;
-          .ed-btn {
-            color: #000000;
-            background: #f0e68c;
-            border: 2px solid #b0c4de;
-            border-radius: 10px;
-            padding: 5px;
-          }
-          // .delete-btn {
-          //   background: #f0e68c;
-          //   border: 2px solid #b0c4de;
-          //   border-radius: 10px;
-          //   padding: 0 5px;
-          // }
-          // .edit-btn {
-          //   background: #f0e68c;
-          //   border: 2px solid #b0c4de;
-          //   border-radius: 10px;
-          //   padding: 0 5px;
-          // }
+      .edit-delete-btn {
+        // height: 30px;
+        width: 100px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        .ed-btn {
+          color: #000000;
+          background: #f0e68c;
+          border: 2px solid #b0c4de;
+          border-radius: 10px;
+          padding: 5px;
         }
+      }
     }
   }
 }

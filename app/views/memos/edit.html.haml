@@ -1,7 +1,7 @@
 .Edit-page
   .header
     .subtitle
-      %h1.apptitle Take Notes
+      %h1= link_to "Take Notes", "/", class: 'apptitle'
   .contents
     = form_with(model: @memo, local: true) do |f|
       .form-group
