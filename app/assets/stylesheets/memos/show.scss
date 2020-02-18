@@ -1,4 +1,4 @@
-.toppage {
+.Showpage {
   .header{
     height: 100px;
     width: 100%;
@@ -88,15 +88,15 @@
             padding: 0 5px;
           }
         }
-        // .edit-destroy {              /*検証*/
-        //   text-align: right;
-        //   cursor: pointer;
-        //   &:hover .edit-destroy_list {
-        //       display: block;
-        //     }
-        //   .chevron {
-        //     font-size: 20px;
-        //   }
+        // .edit-destroy {              検証
+          //   text-align: right;
+          //   cursor: pointer;
+            // &:hover .edit-destroy_list {
+            //     display: block;
+            //   }
+            // .chevron {
+            //   font-size: 20px;
+            // }
         //   .edit-destroy_list {
         //     position: absolute;
         //     text-align: right;
@@ -131,7 +131,7 @@
     }
   }
 }
-// .toppage {
+// .Showpage {
 //   .header{
 //     height: 100px;
 //     width: 100%;

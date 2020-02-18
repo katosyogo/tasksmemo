@@ -1,4 +1,4 @@
-.toppage
+.Showpage
   .header
     .subtitle
       %h1= link_to "Take Notes", "/", class: 'apptitle'
@@ -31,7 +31,7 @@
                 = link_to '編集', "/memos/#{memo.id}/edit", class: "ed-btn", method: :get
             = memo.content
 
--# .toppage
+-# .Showpage
 -#   .header
 -#     .subtitle
 -#       %h1= link_to "Take Notes", "/", class: 'apptitle'
@@ -43,5 +43,5 @@
 -#       .sign
 -#         = link_to "ログイン", new_user_session_path, class: 'post'
 -#         = link_to "新規登録", new_user_registration_path, class: 'post'
--#   .else-content
--#     %h2 メモを取ろう
+-#     .else-content
+-#       %h2 メモを取ろう

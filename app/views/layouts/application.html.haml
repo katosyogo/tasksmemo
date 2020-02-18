@@ -8,6 +8,10 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    -# - if user_signed_in?
+    -#   = render 'memos/show'
+    -# - else
+    -#   = render '/'
     -# - if flash[:notice]
     -#   .alert.alert-info= flash[:notice]
     -# - if flash[:alert]
