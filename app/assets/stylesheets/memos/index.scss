@@ -11,14 +11,17 @@
     .apptitle {
       color:#000000;
     }
-    .post {
-      font-size: 18px;
-      color: #000000;
-      border: 2px solid #b0c4de;
-      border-radius: 10px;
-      padding: 5px;
-      background: #ffd700;
-      margin: 5px;
+    .sign {
+      display: flex;
+      .post {
+        font-size: 18px;
+        color: #000000;
+        border: 2px solid #b0c4de;
+        border-radius: 10px;
+        padding: 5px;
+        background: #ffd700;
+        margin: 5px;
+      }
     }
   }
   .first-title {

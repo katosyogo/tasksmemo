@@ -10,6 +10,11 @@
       .sign
         = link_to "ログイン", new_user_session_path, class: 'post'
         = link_to "新規登録", new_user_registration_path, class: 'post'
+        = form_for(:user, url: user_session_path) do |f|
+          = f.hidden_field :email, value:  'sample@gmail.com'
+          = f.hidden_field :password, value: 'test567'
+          = f.hidden_field :nickname, value: 'testさん'
+          = f.submit 'テストログイン', class: 'post'
   - if @memos.present?
     .main-contents
       %ul.left-contents
