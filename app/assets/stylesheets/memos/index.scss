@@ -21,6 +21,9 @@
       margin: 5px;
     }
   }
+  .first-title {
+    text-align: center;
+  }
   .main-contents {
     width: 100%;
     height: 100vh;  /*縦にいっぱい*/
@@ -40,9 +43,6 @@
         border-bottom: 2px solid #dcdcdc;
         padding: 5px;
         cursor: pointer;
-        // background-color: #ffd700;
-        // display: flex;    /*セットで縦並び*/
-        // flex-direction: column;
         .list-date {
           padding: 5px 5px 5px 0;
         }
@@ -57,7 +57,7 @@
     }
     .right-contents {
       width: calc(100% - 20%);
-      height: 100vh;
+      // height: 100vh;
       padding: 30px;
       overflow: scroll;
       .text-date {
@@ -66,95 +66,34 @@
       }
       .text-content {
         margin-top: 20px;
+        white-space: pre-wrap;
+      }
         .edit-delete-btn {
-          height: 30px;
+          // height: 30px;
           width: 100px;
           display: flex;
           justify-content: space-between;
           margin-bottom: 10px;
           .ed-btn {
             color: #000000;
-          }
-          .delete-btn {
             background: #f0e68c;
             border: 2px solid #b0c4de;
             border-radius: 10px;
-            padding: 0 5px;
+            padding: 5px;
           }
-          .edit-btn {
-            background: #f0e68c;
-            border: 2px solid #b0c4de;
-            border-radius: 10px;
-            padding: 0 5px;
-          }
+          // .delete-btn {
+          //   background: #f0e68c;
+          //   border: 2px solid #b0c4de;
+          //   border-radius: 10px;
+          //   padding: 0 5px;
+          // }
+          // .edit-btn {
+          //   background: #f0e68c;
+          //   border: 2px solid #b0c4de;
+          //   border-radius: 10px;
+          //   padding: 0 5px;
+          // }
         }
-        // .edit-destroy {              /*検証*/
-        //   text-align: right;
-        //   cursor: pointer;
-        //   &:hover .edit-destroy_list {
-        //       display: block;
-        //     }
-        //   .chevron {
-        //     font-size: 20px;
-        //   }
-        //   .edit-destroy_list {
-        //     position: absolute;
-        //     text-align: right;
-        //     width: 80px;
-        //     right: 0;
-        //     font-size: 12px;
-        //     background-color: #fff;
-        //     border: 1px solid #ddd;
-        //     display: none;
-        //     // box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-        //     border-radius: 3px;
-        //     .edl {
-        //       border-bottom: 1px solid #ddd;
-        //       display: block;
-        //       height: 100px;
-        //       background-color: blueviolet;
-        //       width: 80px;
-        //       &:last-child {
-        //         border-bottom: 0;
-        //       }
-        //       a {
-        //         display: block;
-        //         padding: 5px;
-        //         &:hover {
-        //           color: black;
-        //         }
-        //       }
-        //     }
-        //   }
-        // }
-      }
     }
   }
 }
-// .toppage {
-//   .header{
-//     height: 100px;
-//     width: 100%;
-//     padding: 0 150px;
-//     background-color: #ffdead;
-//     color: #fff;
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//     .apptitle {
-//       color:#000000;
-//     }
-//     .post {
-//       font-size: 18px;
-//       color: #000000;
-//       border: 2px solid #b0c4de;
-//       border-radius: 10px;
-//       padding: 5px;
-//       background: #ffd700;
-//       margin: 5px;
-//     }
-//   }
-//   .else-content {
-//     text-align: center;
-//   }
-// }

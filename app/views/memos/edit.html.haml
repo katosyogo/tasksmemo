@@ -1,14 +1,14 @@
 .Edit-page
   .header
     .subtitle
-      %h1= link_to "Take Notes", "/", class: 'apptitle'
+      %h1.apptitle Take Notes
   .contents
     = form_with(model: @memo, local: true) do |f|
       .form-group
         %h2.post 編集する
-        %label.form-title タイトル
+        %label.form-title タイトル(必須)
         = f.text_field :title, class: "form-area", placeholder: "タイトルを入力して下さい"
-        %label.form-title 本文
+        %label.form-title 本文(任意)
         = f.text_area :content, class: "form-text", placeholder: "本文を入力して下さい" , rows: "10"
       .btn  
         = f.submit "SEND", class: "create-btn"

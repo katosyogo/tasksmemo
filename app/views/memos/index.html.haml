@@ -1,7 +1,7 @@
 .toppage
   .header
     .subtitle
-      %h1= link_to "Take Notes", "/", class: 'apptitle'
+      %h1.apptitle Take Notes
     - if user_signed_in?
       .user_nav.sign
         = link_to "ログアウト", destroy_user_session_path, class:"post",method: :delete
@@ -10,38 +10,26 @@
       .sign
         = link_to "ログイン", new_user_session_path, class: 'post'
         = link_to "新規登録", new_user_registration_path, class: 'post'
-  .main-contents
-    %ul.left-contents
-      - @memos.each do |memo|
-        %li.list
-          .list-title
-            = memo.title
-          .list-date 
-            = memo.created_at
-    %ul.right-contents
-      - @memos.each do |memo|
-        %li.text.hide
-          .text-date
-            = memo.created_at
-          .text-content
+  - if @memos.present?
+    .main-contents
+      %ul.left-contents
+        - @memos.each do |memo|
+          %li.list
+            .list-title
+              = memo.title
+            .list-date 
+              = memo.updated_at.to_s(:datetime_jp)
+      %ul.right-contents
+        - @memos.each do |memo|
+          %li.text.hide
+            .text-date
+              = memo.updated_at.to_s(:datetime_jp)
             .edit-delete-btn
               .delete-btn
                 = link_to '削除', "/memos/#{memo.id}", class: "ed-btn", method: :delete
               .edit-btn 
                 = link_to '編集', "/memos/#{memo.id}/edit", class: "ed-btn", method: :get
-            = memo.content
-
--# .toppage
--#   .header
--#     .subtitle
--#       %h1= link_to "Take Notes", "/", class: 'apptitle'
--#     - if user_signed_in?
--#       .user_nav.sign
--#         = link_to "ログアウト", destroy_user_session_path, class:"post",method: :delete
--#         = link_to  "新規作成", new_memo_path, class: "post"
--#     - else
--#       .sign
--#         = link_to "ログイン", new_user_session_path, class: 'post'
--#         = link_to "新規登録", new_user_registration_path, class: 'post'
--#   .else-content
--#     %h2 メモを取ろう
+            .text-content
+              = memo.content
+  - else
+    %h2.first-title メモを取ろう
