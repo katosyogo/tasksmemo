@@ -1,6 +1,6 @@
 .SigninPage
   .signheader
-    %b.sign ログイン
+    %b= link_to "ログイン", "/", class: "sign"
   .sign-contents
     .form-group
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
