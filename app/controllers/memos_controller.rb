@@ -1,7 +1,8 @@
 class MemosController < ApplicationController
 
   def index
-    @memos = Memo.where(user_id: current_user.id).order("updated_at DESC")if user_signed_in?   #要検証
+    @memos = Memo.where(user_id: current_user.id).order("updated_at DESC")if user_signed_in?
+    @user = User.find(current_user[:id])if user_signed_in?
   end
 
   def new

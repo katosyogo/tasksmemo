@@ -8,13 +8,5 @@
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
   %body
-    -# - if user_signed_in?
-    -#   = render 'memos/show'
-    -# - else
-    -#   = render '/'
-    -# - if flash[:notice]
-    -#   .alert.alert-info= flash[:notice]
-    -# - if flash[:alert]
-    -#   .alert.alert-danger= flash[:alert]
     = yield
 

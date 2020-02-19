@@ -3,6 +3,8 @@
     .subtitle
       %h1= link_to "Take Notes", "/", class: 'apptitle'
     - if user_signed_in?
+      .user-name
+        = @user.nickname
       .user_nav.sign
         = link_to "ログアウト", destroy_user_session_path, class:"post",method: :delete
         = link_to  "新規作成", new_memo_path, class: "post"
