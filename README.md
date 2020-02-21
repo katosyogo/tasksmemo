@@ -21,8 +21,6 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
-
 # tasksmemo DB設計図
 ## usersテーブル
 |Column|Type|Options|
