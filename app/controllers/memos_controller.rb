@@ -1,5 +1,4 @@
 class MemosController < ApplicationController
-  # before_action :set_memo, except: [:index, :new, :create]
 
   def index
     @memos = Memo.where(user_id: current_user.id).order("updated_at DESC")if user_signed_in?
@@ -11,7 +10,7 @@ class MemosController < ApplicationController
 
   def new
     @memo = Memo.new
-    @memo.images.new
+    # @memo.images.new
   end
 
   def create
