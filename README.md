@@ -44,3 +44,6 @@ Things you may want to cover:
 
 ## Association
 - belongs_to :user
+
+## 参照動画はこちら
+https://gyazo.com/bbd0d1f86717b4746589ecff5694c248
