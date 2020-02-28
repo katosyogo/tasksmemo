@@ -10,5 +10,11 @@
         = f.text_field :title, class: "form-area", placeholder: "タイトルを入力して下さい"
         %label.form-title 本文(任意)
         = f.text_area :content, class: "form-text", placeholder: "本文を入力して下さい" , rows: "10"
+        #image-box
+          = f.fields_for :images do |image|
+            .js-file_group{"data-index" => "#{image.index}"}
+              = image.file_field :src, class: 'js-file'
+              %br/
+              %span.js-remove 削除
       .btn  
         = f.submit "SEND", class: "create-btn"

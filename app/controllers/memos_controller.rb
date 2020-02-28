@@ -2,11 +2,15 @@ class MemosController < ApplicationController
 
   def index
     @memos = Memo.where(user_id: current_user.id).order("updated_at DESC")if user_signed_in?
+    # @memo = Memo.find(params[:id])
+    # @images = Image.where(memo_id: @memo.id)
+    # @memos = Memo.includes(:images)
     @user = User.find(current_user[:id])if user_signed_in?
   end
 
   def new
     @memo = Memo.new
+    # @memo.images.new
   end
 
   def create
@@ -37,7 +41,12 @@ class MemosController < ApplicationController
 
   private
   def memo_params
-    params.require(:memo).permit(:title, :content).merge(user_id: current_user.id)
+    params.require(:memo).permit(:title, :content, images_attributes:  [:src, :_destroy, :id]).merge(user_id: current_user.id)
   end
+
+  # def set_memo
+  #   @memo = Memo.find(params[:id])
+  # end
+
 
 end
