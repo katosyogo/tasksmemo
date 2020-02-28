@@ -36,5 +36,11 @@
                 = link_to '編集', "/memos/#{memo.id}/edit", class: "ed-btn", method: :get
             .text-content
               = memo.content
+              - memo.images.each do |i|
+                = image_tag i.src.url
   - else
     %h2.first-title メモを取ろう
+
+
+-# - product.images.each do |image|
+-#   = image_tag image.src.url
